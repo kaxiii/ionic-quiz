@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="status==0"> Game Config </ion-title>
+    <ion-title *ngIf="status==1"> Round {{round+1}} / {{total_questions}} </ion-title>
+    <ion-title *ngIf="status==2"> Game End </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-progress-bar *ngIf="status==1" color="success" value={{progress}}></ion-progress-bar>
+<ion-content>
+
+  <div *ngIf="status==0" id="config">
+    <ion-segment (ionChange)="segmentChanged($event)" value="friends" color="danger">
+      <ion-segment-button value="friends">
+        <ion-label>Friends</ion-label>
+        <ion-icon name="star"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="enemies">
+        <ion-label>Enemies</ion-label>
+        <ion-icon name="heart"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+    <div id="play-button">
+      <ion-icon (click)="startGame()" name="play-circle"></ion-icon>
+    </div>
+  </div>
+
+  <div *ngIf="status==1" id="game">
+    <div id="question">
+      {{question}}
+    </div>
+
+    <div id="options">
+      <ion-button (click)="choseOption(0)" expand="block">{{option1}}</ion-button>
+      <ion-button (click)="choseOption(1)" expand="block">{{option2}}</ion-button>
+      <ion-button (click)="choseOption(2)" expand="block">{{option3}}</ion-button>
+      <ion-button (click)="choseOption(3)" expand="block">{{option4}}</ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="status==2" id="end-game">
+    <div id="play-button">
+      <ion-icon (click)="startGame()" name="play-circle"></ion-icon>
+    </div>
+  </div>
+
+</ion-content>

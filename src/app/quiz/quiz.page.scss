@@ -1,0 +1,53 @@
+#config {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 300px;
+    padding: 15px;
+    background-color: darkslategrey;
+    border-radius: 30px;
+}
+
+#end-game {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 300px;
+    padding: 15px;
+    background-color: darkslategrey;
+    border-radius: 30px;
+}
+
+#play-button {
+    margin-top: 30px;
+    border: 1px solid white;
+}
+
+#play-button ion-icon {
+    font-size: 64px;
+  }
+
+#question {
+    min-height: 300px;
+    width: 85%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid lightgreen;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+#options {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#options ion-button{
+    height: 50px;
+    margin-bottom: 10px;
+}
