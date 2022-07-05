@@ -17,6 +17,9 @@ export class QuizPage implements OnInit {
   progress = 0.0; // shows the progress bar
   status = 0; // 0 - config / 1 - game / 2 - end-game
 
+  pepperoni = false;
+  dependencies = true;
+
   constructor() { }
 
   ngOnInit() {

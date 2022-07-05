@@ -13,12 +13,38 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="game-options">
-
-  </div>
-
+  <!--
   <div id="container">
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div class="slide-div">
+        <h1>Países & Capitales</h1>
+        <ion-icon routerLink="/quiz" name="play-circle"></ion-icon>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide-div">
+        <h1>Países & Ciudades</h1>
+        <ion-icon name="play-circle"></ion-icon>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide-div">
+        <h1>Montañas</h1>
+        <ion-icon name="play-circle"></ion-icon>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <div class="home-div">
+
   </div>
+
+  <ion-button routerLink="/quiz">
+    Quiz
+  </ion-button>
+
 </ion-content>
