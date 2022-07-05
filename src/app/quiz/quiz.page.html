@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-progress-bar *ngIf="status==1" color="success" value={{progress}}></ion-progress-bar>
-<ion-content>
+<ion-content class="background-image">
 
   <div *ngIf="status==0" id="config">
     <ion-segment (ionChange)="segmentChanged($event)" value="easy" color="danger" mode="ios">

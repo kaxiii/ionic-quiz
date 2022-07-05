@@ -1,7 +1,5 @@
 ion-content {
-    //background-image: url("/assets/bk/bk1.jpg");
-    background-image: linear-gradient(red, yellow);
-    //height: 500px;
+    --background: url('/assets/bk/bk1.jpg') 0 /auto 100% no-repeat;
 }
 
 #config {
@@ -13,6 +11,10 @@ ion-content {
     padding: 15px;
     background-color: darkslategrey;
     border-radius: 30px;
+}
+
+ion-list {
+    background-color: darkslategray;
 }
 
 #end-game {
