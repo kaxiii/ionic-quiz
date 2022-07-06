@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { GameService } from '../services/game.service';
 
 @Component({
   selector: 'app-quiz',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz.page.scss'],
 })
 export class QuizPage implements OnInit {
+  vector;
+
   question = "Question";
   option1 = "Option 1";
   option2 = "Option 2";
@@ -20,10 +23,14 @@ export class QuizPage implements OnInit {
   pepperoni = false;
   dependencies = true;
 
-  constructor() { }
+  constructor(//private game: GameService
+  ) { }
 
   ngOnInit() {
+    //this.vector = this.game.vector()
   }
+
+  
 
   segmentChanged(ev: any) {
     console.log('Segment changed', ev);
@@ -45,6 +52,7 @@ export class QuizPage implements OnInit {
       this.round++;
       this.progress = this.round / this.total_questions;
       //console.log(this.round + ' / ' + this.total_questions + ' = ' + this.progress);
+      //this.question = this.vector[this.round].name;
     }
     else {
       this.endGame();
